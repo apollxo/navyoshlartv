@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.gallery{
+  display: flex;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color:#110f1a;
+}
+.gallery .center
+{
+  position: relative;
+  width: 770px;
+  left: -70px;
+  perspective: 1200px;
+}
+.center .img-card
+{
+  position: relative;
+  height: 350px;
+  width: 400px;
+  transform-style: preserve-3d;
+   transition:all 0.3s ease-in-out;
+  /*transition: transform  all.5s ease-in;*/
+  
+}
+.img-card{
+  margin-left:65px;
+  border-radius:8px;
+}
+.img-card img
+{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  margin-left:65px;
+  border-radius:8px;
+  border:2px solid black;
+}
+.img-card img:nth-child(1){
+  transform-origin: top left;
+  transform: rotateX(-270deg) translateY(-175px);
+}
+.img-card img:nth-child(2){
+  transform:  translateZ(175px);
+  /*opacity: 0;*/
+}
+.img-card img:nth-child(3){
+  transform-origin: bottom center;
+  transform: rotateX(-90deg) translateY(175px);
+}
+.img-card img:nth-child(4){
+  transform-origin: bottom right;
+  transform: rotateX(-180deg) translateY(350px) translateZ(175px);
+}
+#tab-1:checked ~ .img-card{
+  transform: rotateX(-90deg);
+}
+#tab-2:checked ~ .img-card{
+  transform: rotateX(0deg);
+}
+#tab-3:checked ~ .img-card{
+  transform: rotateX(90deg);
+}
+#tab-4:checked ~ .img-card{
+  transform: rotateX(180deg);
+}
+.sliders{
+  position: absolute;
+  display: block;
+  right: 0;
+  top: -30px;
+}
+.sliders label{
+  height: 98px;
+  width: 120px;
+  border-radius:8px;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 5px 0;
+  filter: grayscale(100%);
+  /*object-fit: cover;*/
+  border:2px solid #2d4052;
+    
+}
+.sliders label:nth-child(1){
+  margin-top: 0;
+}
+.gallery img {
+   
+  width: 100%;
+}
+
+.label img,
+#tab-1:checked~.sliders label:nth-child(1) img,
+#tab-2:checked~.sliders label:nth-child(2) img,
+#tab-3:checked~.sliders label:nth-child(3) img,
+#tab-4:checked~.sliders label:nth-child(4) img
+{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: .9;
+}
+.sliders label:hover{
+  filter: grayscale(0%);
+  opacity: 1;
+}
+.gallery input{
+  display: none;
+
+}
+.gallery h2{
+  top: 50%;
+  font-size: 80px;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  padding-left: 15px;
+ font-family: 'Bebas Neue', sans-serif;
+  color: white;
+}

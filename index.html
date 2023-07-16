@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/animation.css">
   <link rel="stylesheet" href="./assets/css/movies.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/gallery.css">
 
   <!-- 
     - google font link
@@ -89,7 +90,7 @@
             <ion-icon name="close-outline"></ion-icon>
           </button>
 
-        </div>
+        </div> 
 
         <ul class="navbar-list">
 
@@ -98,19 +99,22 @@
           </li>
 
           <li>
-            <a href="./test.html" class="navbar-link">Televizion dasturlar</a>
+            <a href="./test.html" class="navbar-link" id="tele_dastur">Tele dasturlar</a>
           </li>
 
-          <li>
+          <!-- <li>
             <a href="./test.html" class="navbar-link">Tok Shou</a>
+          </li> -->
+
+          <li>
+            <a href="./test.html" class="navbar-link" id="tanlov">Tanlovlar</a>
           </li>
 
           <li>
-            <a href="./test.html" class="navbar-link">Kino</a>
+            <a href="./test.html" class="navbar-link" id="about_us">Biz haqmizda</a>
           </li>
-
           <li>
-            <a href="./test.html" class="navbar-link">Tanlovlar</a>
+            <a href="./test.html" class="navbar-link">Aloqa</a>
           </li>
 
         </ul>
@@ -173,28 +177,29 @@
         </video>
       </div>
         <div class="container">
+            <div class="glass">
+                  <div class="hero-content">
 
-          <div class="hero-content">
+                   <!-- <p class="hero-subtitle">Navoiy Yoshlar TV</p> -->
 
-            <p class="hero-subtitle">Navoiy Yoshlar TV</p>
+                  <h1 class="h1 hero-title">
+                  Televizion dasturlar, tok shoular va milliy seriallar.
+                  </h1>
 
-            <h1 class="h1 hero-title">
-              - Televizion dasturlar, tok shoular va milliy seriallar.
-            </h1>
+                  <div class="meta-wrapper">
 
-            <div class="meta-wrapper">
+                  <div class="badge-wrapper">
+                    <div class="badge badge-fill">Milliy</div>
 
-              <div class="badge-wrapper">
-                <div class="badge badge-fill">Milliy</div>
+                    <div class="badge badge-outline">Zamonaviy</div>
 
-                <div class="badge badge-outline">Zamonaviy</div>
+                     <div class="badge badge-fill">Ekskluziv</div>
 
-                 <div class="badge badge-fill">Ekskluziv</div>
+                     <div class="badge badge-outline">Ilg'or</div>
 
-                 <div class="badge badge-outline">Ilg'or</div>
-
-                 <div class="badge badge-fill last"><b>Telekanal</b></div>
-              </div>
+                     <div class="badge badge-fill last"><b>Telekanal</b></div>
+                  </div>
+            </div>
              <!--  <br>
             <button class="btn btn-primary">
               <ion-icon name="play"></ion-icon>
@@ -209,28 +214,65 @@
       </section>
 </div>
 
-
-      <section class="upcoming" id="tele-dasturlar">
-        <!-- <div class="container"> -->
-      <div class="main_part">
-      <div id="app">
-        <div class="title">
-          <div class="title-inner">
-            <div class="cafe">
-              <div class="cafe-inner">Eng Sifatli</div>
-            </div>
-            <div class="mozart">
-              <div class="mozart-inner">Tele Ko'rsatuvlar</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="image">
-          <img src='./assets/images/img2.jpg' alt=''>
-        </div>
+<section class="info">
+  
+   <div class= 'container'>
+<div class="container_content">
+<div class="container_content_inner">
+<div class="title">
+  <h1>Navoiy Yoshlar TV</h1>
 </div>
+<div class="par">
+<p>
+Navoiy shahridagi eng yosh, zamonaviy va milliylikni namoyon qiladigan yoshlarning sevimli telekani. 
+</p>
+</div>
+<div class="btns">
+<a href="#img_gallery">
+<button class='btns_more'> Lavhalar </button>
+</a>
+</div>
+</div>
+</div>
+ <div class="container_outer_img">
+ <div class="img-inner">
+ <img src='./assets/images/img.png '  alt="" class="container_img"/>
+       </div>
+     </div>
+  </div>
+<div class="overlay"></div>
+  
+</section>
 
+ <section id="img_gallery">
+<div class="gallery">
+  <h2>Jamoamizning ish<br>   jarayonidan lavhalar</h2>
+  <div class="center">
+    <input type="radio" checked="" name="active" id="tab-1">
+    <input type="radio" name="active" id="tab-2">
+    <input type="radio" name="active" id="tab-3">
+    <input type="radio" name="active" id="tab-4">
+    <div class="sliders">
+
+           <label for="tab-1"><img src="./assets/images/gallery_img1.png"></label>
+    <label for="tab-2"><img src="./assets/images/gallery_img2.png"></label>
+    <label for="tab-3"><img src="./assets/images/gallery_img9.png"></label>
+    <label for="tab-4"><img src="./assets/images/gallery_img5.png"></label>
+
+
+      </div>
+    <div class="img-card">
+      
+      <img src="./assets/images/gallery_img1.png">
+      <img src="./assets/images/gallery_img2.png">
+      <img src="./assets/images/gallery_img9.png">
+      <img src="./assets/images/gallery_img5.png">
+      
+    </div>
+  </div>
  </section>
+
+
      
 <!-- SERVICE -->
       <section class="service">
@@ -249,7 +291,7 @@
             <h2 class="h2 service-title">Telekanal Tomoshabinlari uchun- </h2>
 
             <p class="service-text">
-              Haftaning har bir kunida jahon kinosi va milliy seriallar jamlami taqdim etib boriladi. Ijtimoiy tarmoqlarda ham o'z sahifalarida izoh hamda takliflarni qabul qiladi.
+              Haftaning har kunida jahon kinosi va milliy seriallar jamlami taqdim etib boriladi. Ijtimoiy tarmoqlarda ham o'z sahifalarida izoh hamda takliflarni qabul qiladi.
             </p>
 
             <ul class="service-list">
@@ -338,6 +380,8 @@
   -->
 
   <footer class="footer">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22284.07801136924!2d65.37740472754047!3d40.11454119422657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1689507758636!5m2!1sen!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 
 <div class="main__body">
     <!-- <div class="main"></div> -->
@@ -476,11 +520,44 @@
       <h1 class="footer-text"><a href='index.html'>Navoiy Yoshlar TV</a></h1>
       <br>
     <div class="end">
-      <p style="text-align: center;">
-      NavYoshTV is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using NavYoshTV, you agree to have read and accepted our terms of use, cookie and privacy policy.</p>
+      
+      <div class="info2">
+          <p><q>MEDIA STUDIO NAVAI</q> MCHJ</p>
+          <p>Navoiy Yoshlar TV</p>
+      </div>   
 
-<p class="copyright">Copyright 1999-2023 by Refsnes Data. All Rights Reserved.
-NavYoshTV is Powered by me.</p>
+
+      <div class='contact'>
+        <div class="manzil">
+        <img src="./assets/logos/location_logo.png">
+        <p>Navoiy viloyati,<br> Navoiy shahri,<br> Kimyogar 428-uy</p>
+        </div>
+
+        <div class="numbers">
+          <a href="">
+        <img src="./assets/logos/phone.png">
+        <span>+998 (94) 252-51-25</span> 
+      </a>
+      
+        <a href="#">
+        <img src="./assets/logos/phone.png">
+        <span>+998 (94) 252-51-25</span>
+        </a>
+        <a href="#">
+        <img src="./assets/logos/email2.png" width="30" height="30">
+        <span>navyoshlartv@inbox.ru</span>
+      </a>
+      </div>
+
+      </div>     
+
+      <div class="social_media">
+        <img src="./assets/logos/youtubee.png">
+        <img src="./assets/logos/facebook.png">
+        <img src="./assets/logos/telegram.png">
+        <img src="./assets/logos/insta.png">
+      </div>
+
     </div>
     </div>
 <svg style="position:fixed; top:100vh">
@@ -523,5 +600,7 @@ NavYoshTV is Powered by me.</p>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+<script>
 
+</script>
 </html>
