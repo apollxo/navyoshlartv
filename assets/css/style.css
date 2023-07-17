@@ -163,7 +163,7 @@ video {
   width: 100%;
   z-index: 1;
   overflow: hidden;
-  -webkit-filter: blur(1.5px);
+  -webkit-filter: blur(0.5px);
 }
 .hero .video_wrapper{
   z-index:1;
